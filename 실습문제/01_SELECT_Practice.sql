@@ -146,5 +146,151 @@ SELECT EMP_NAME,DEPT_CODE
 FROM employee
 WHERE DEPT_CODE NOT IN('D1','D3');
 
+--D5 부서에 속한 사원의 사원번호 사원이름 부서코드 조회
+SELECT EMP_ID,EMP_NAME,DEPT_CODE
+FROM employee
+WHERE DEPT_CODE IN('D5');
+
+-- 입사일이 (hire_date)2000년 이후인 직원들의 정보 조회 employee
+SELECT *
+FROM employee
+WHERE HIRE_DATE >= TO_DATE('2000-01-01','YYYY-MM-DD');
+
+--퇴직여부가 Y 이고, 퇴사일이 2015년 이후인 직원들의 정보를 조회
+SELECT *
+FROM employee
+WHERE ENT_YN ='Y'
+AND ENT_DATE >= TO_DATE('2015-01-01','YYYY-MM-DD');
+
+--EMPLOYEE 테이블에서 성씨가 '전'씨인 사원의 이름 조회
+SELECT EMP_NAME
+FROM employee
+WHERE EMP_NAME
+LIKE '전%';
+
+
+-- EMPLOYEE 테이블에서 이름이 수로 끝나는 사원의 이름 조회
+SELECT EMP_NAME
+FROM employee
+WHERE EMP_NAME
+LIKE '%수';
+
+SELECT * FROM EMPLOYEE;
+
+SELECT DEPT_TITLE,LOCATION_ID FROM department;
+
+SELECT EMP_NAME,SALARY
+FROM employee
+WHERE salary >= 3000000;
+
+SELECT *
+FROM department
+WHERE LOCATION_ID = 'L1';
+
+SELECT *
+FROM EMPLOYEE
+WHERE BONUS IS NULL;
+
+SELECT EMP_NAME
+FROM employee
+WHERE salary >= 2500000
+and bonus in('0.2');
+
+SELECT *
+FROM employee
+WHERE JOB_CODE IN('J6')
+OR    JOB_CODE IN('J7');
+
+SELECT *
+FROM department
+WHERE dept_title 
+LIKE '%영업%';
+
+SELECT *
+FROM employee
+WHERE hire_date >= TO_DATE('2000-01-01','YYYY-MM-DD');
+
+SELECT *
+FROM employee
+WHERE ent_yn IN('Y')
+AND ent_date >= TO_DATE('2015-01-01','YYYY-MM-DD');
+
+SELECT *
+FROM employee
+WHERE emp_name
+LIKE '김%';
+
+SELECT *
+FROM employee
+WHERE job_code IN('J1','J2','J3');
+
+SELECT *
+FROM employee
+WHERE dept_code NOT IN('D1','D5','D9');
+
+SELECT *
+FROM employee
+WHERE EMP_NAME
+LIKE '%김%';
+
+SELECT *
+FROM employee
+WHERE EMAIL
+LIKE '%gmail%';
+
+SELECT *
+FROM employee
+WHERE phone
+LIKE '010%';
+
+SELECT *
+FROM employee
+WHERE phone
+LIKE '%1234';
+
+SELECT *
+FROM department
+WHERE dept_title
+LIKE '%영업';
+
+SELECT *
+FROM department
+WHERE dept_title
+LIKE '%관리%';
+
+SELECT *
+FROM employee
+WHERE emp_name
+LIKE '이%';
+
+SELECT *
+FROM employee
+WHERE job_code
+LIKE 'J1%';
+
+SELECT *
+FROM employee
+WHERE EMAIL
+LIKE '%com';
+
+SELECT *
+FROM employee
+WHERE hire_date = TO_DATE('2021-01-01','YYYY-MM-DD');
+
+SELECT *
+FROM employee
+WHERE emp_name
+LIKE '%호';
+
+SELECT *
+FROM employee
+WHERE EMAIL
+LIKE '%company%';
+
+SELECT *
+FROM employee
+WHERE emp_name
+LIKE '수%'
+OR emp_name LIKE '%수';
 
 
