@@ -174,119 +174,144 @@ SELECT EMP_NAME
 FROM employee
 WHERE EMP_NAME
 LIKE '%수';
-
+--1
 SELECT * FROM EMPLOYEE;
 
+--2
 SELECT DEPT_TITLE,LOCATION_ID FROM department;
 
+--3
 SELECT EMP_NAME,SALARY
 FROM employee
 WHERE salary >= 3000000;
 
+--4
 SELECT *
 FROM department
 WHERE LOCATION_ID = 'L1';
 
+--5
 SELECT *
 FROM EMPLOYEE
 WHERE BONUS IS NULL;
 
+--6
 SELECT EMP_NAME
 FROM employee
 WHERE salary >= 2500000
 and bonus in('0.2');
 
+--7
 SELECT *
 FROM employee
 WHERE JOB_CODE IN('J6')
 OR    JOB_CODE IN('J7');
 
+--8
 SELECT *
 FROM department
 WHERE dept_title 
 LIKE '%영업%';
 
+--9
 SELECT *
 FROM employee
 WHERE hire_date >= TO_DATE('2000-01-01','YYYY-MM-DD');
 
+--10
 SELECT *
 FROM employee
 WHERE ent_yn IN('Y')
 AND ent_date >= TO_DATE('2015-01-01','YYYY-MM-DD');
 
+--11
 SELECT *
 FROM employee
 WHERE emp_name
 LIKE '김%';
 
+--12
 SELECT *
 FROM employee
 WHERE job_code IN('J1','J2','J3');
 
+--13
 SELECT *
 FROM employee
 WHERE dept_code NOT IN('D1','D5','D9');
 
+--14
 SELECT *
 FROM employee
 WHERE EMP_NAME
 LIKE '%김%';
 
+--15
 SELECT *
 FROM employee
 WHERE EMAIL
 LIKE '%gmail%';
 
+--16
 SELECT *
 FROM employee
 WHERE phone
 LIKE '010%';
 
+--17
 SELECT *
 FROM employee
 WHERE phone
 LIKE '%1234';
 
+--18
 SELECT *
 FROM department
 WHERE dept_title
 LIKE '%영업';
 
+--19
 SELECT *
 FROM department
 WHERE dept_title
 LIKE '%관리%';
 
+--20
 SELECT *
 FROM employee
 WHERE emp_name
 LIKE '이%';
 
+--21
 SELECT *
 FROM employee
 WHERE job_code
 LIKE 'J1%';
 
+--22
 SELECT *
 FROM employee
 WHERE EMAIL
 LIKE '%com';
 
+--23
 SELECT *
 FROM employee
 WHERE hire_date = TO_DATE('2021-01-01','YYYY-MM-DD');
 
+--24
 SELECT *
 FROM employee
 WHERE emp_name
 LIKE '%호';
 
+--25
 SELECT *
 FROM employee
 WHERE EMAIL
 LIKE '%company%';
 
+--26
 SELECT *
 FROM employee
 WHERE emp_name
