@@ -100,7 +100,7 @@ ex ) 이름이 비어있지 않은 사원 조회
     오름차순 : ASC(ascending)
     내림차순 : DESC(descending)
 
-    ODER BY 컬럼명; 으로 아무것도 안해주면 기본으로 오름차순 정렬
+    ORDER BY 컬럼명; 으로 아무것도 안해주면 기본으로 오름차순 정렬
     
     
     
