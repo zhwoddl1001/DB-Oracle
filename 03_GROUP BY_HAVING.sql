@@ -18,4 +18,9 @@ GROUP BY 컬렴명 | 함수식,...;
 FROM EMPLOYEE
 GROUP BY DEPT_CODE;
 
+
+HAVING 절 : 그룹함수로 구해 올 그룹에 대한 조건을  설정할 때 사용
+--- 그룹에 대한 조건, 어떤 그룹만 조회하겠다
+
+HAVING 컬럼명 | 함수식 비교연산자 비교값
 */
