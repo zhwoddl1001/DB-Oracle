@@ -22,3 +22,4 @@ CREATE DATABASE 데이터베이스명칭
  CREATE USER '유저명'@'%' IDENTIFIED BY '유저비밀번호';
 GRANT ALL PRIVILEGES ON 데이터베이스명칭.* TO '유저명'@'%';
 FLUSH PRIVILEGES;
+
