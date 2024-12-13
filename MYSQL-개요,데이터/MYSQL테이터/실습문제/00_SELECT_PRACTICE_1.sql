@@ -105,8 +105,8 @@ USERNAME VARCHAR(50) NOT NULL,				-- 이름 (빈 칸 허용 불가)
 EMAIL VARCHAR(100) NOT NULL,				-- 이메일 (빈 칸 허용 불가)
 BIRTHDATE DATE,								-- 생년월일(날짜)
 ACCOUNT_BALANCE DECIMAL(10,2),				-- 계좌 잔액(정수 10글자, 소수점 2자리)
-GENDER ENUM('MAIL','FEMALE'),				-- 성별 (남,녀 중 택 1)
-HOBBIES SET('READING','SPORTS','RUNNIG'));	-- 취미 (설정된 값 중 다중 선택 가능)
+GENDER ENUM('MALE','FEMALE'),				-- 성별 (남,녀 중 택 1)
+HOBBIES SET('READING','SPORTS','RUNNING'));	-- 취미 (설정된 값 중 다중 선택 가능)
 
 
 INSERT INTO USERPROFILE (USERNAME, EMAIL, BIRTHDATE, ACCOUNT_BALANCE, GENDER, HOBBIES)
@@ -133,6 +133,10 @@ VALUES
     ('유재석', 'yoo1@example.com', '1987-05-05', 10000.00, 'MALE', 'READING,SPORTS');
 
     -- 테이블 삭제 * 함부로 하지 말것 반드시 혼자하더라고 상의 후 삭제할 것
-    -- 테이블 삭제 = DROP TABLE 테이블 내 데이트 삭제 DELETE
-    --  DROP TABLE 테이블명칭;
+    -- 테이블 삭제 = DROP TABLE 테이블 내 데이터 삭제 DELETE
+      DROP TABLE userprofile;
     -- ERROR CODE: 1051. Unknow table 'khtdb.userprofile' 테이블이 존재하지 않기 때문에 삭제 불가
+    
+-- 이광수 삭제 PRIMARY KEY 가 걸려있으면 프라이머리 키 까지 모두 작성
+  -- DELETE FROM USERPROFILE WHERE USERNAME = '이광수' AND USER_ID = 17;
+  
