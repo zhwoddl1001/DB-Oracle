@@ -84,6 +84,9 @@ savepoint SP1;
 
 UPDATE USER SET PHONE = CONCAT('KOR)',PHONE);
 
+UPDATE USER 
+SET PHONE = CONCAT('KOR)', SUBSTRING_INDEX(PHONE, ')', -1));
+
 select * from user;
 
 -- ROLLBACK 이용해서 "SP1"되돌리기
