@@ -61,3 +61,23 @@ Durability(지속성)  : 트랜잭션이 완료된 후의 결과는 영구적으
                              송금내역이 존재해야함
 
 */
+
+
+-- USE KHTUSER 를 사용하지않고 KHTUSER 내에 있는 USER 테이블 조회
+
+SELECT * FROM KHTUSER.USER;
+
+
+-- user phone 앞에 작성된 kor) 제거
+SET SQL_SAFE_UPDATES = 0; -- 안전모드 종료
+
+START TRANSACTION;                                   -- savepoint를 사용하기 위해서는 START TRANSACTION 시작 수동 제어
+SAVEPOINT SP1;                                       --  임시로 되돌릴 위치이름 SP1 설정
+USE KHTUSER;                                         --  KHTUSER DB로 접속
+update user SET PHONE = SUBSTRING_INDEX(PHONE,')',1);  -- 수정할 UPDATE 작성
+SELECT * FROM USER;									         -- 제대로 수정했는지 확인
+
+ROLLBACK TO SP1;		                                 -- 원하는대로 결과 수정 X sp1 임시저장한 위치로 되돌리기
+update user SET PHONE = SUBSTRING_INDEX(PHONE,')',-1); -- 수정 
+SELECT * FROM USER;	                                    -- 올바르게 수정됐는지 확인
+commit;                                                 -- 수정결과 저장
