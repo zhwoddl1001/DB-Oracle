@@ -41,3 +41,5 @@ create TABLE 테이블명(
 --> INSERT UPDATE 시 해당 컬럼에 값을 넣지 않으면 지정한 기본값이 들어간다.
 
 */
+
+-- CREATE를 생성할 때 제약조건은 15_제약조건.sql 참조

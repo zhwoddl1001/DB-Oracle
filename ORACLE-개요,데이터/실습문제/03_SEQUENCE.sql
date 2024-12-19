@@ -8,9 +8,13 @@ SELECT *FROM CAFE;
 --	    	CREATE SEQUENCE 가져간다 START WITH 800 INCREMENT BY 1;
 --          가져가는 사람 수를 700번 부터 700,701,702, ... 순차적으로 가져간 인원 체크
 
+DROP SEQUENCE SEQ_USER;
 
-CREATE SEQUENCE SEQ_USER; -- START WITH 1 INCREMENT BY 1 이 기본 값으로 설정 
 
+CREATE SEQUENCE seq_user; -- START WITH 1 INCREMENT BY 1 이 기본 값으로 설정 
+
+
+DROP TABLE STUDENT;
 -- 테이블 생성 USER 예약어 이기 때문에 TABLE 명으로 작성할 경우 ``이나 "" 로 만들기
 -- ORACLE = "" MYSQL = `` 으로 테이블명 설정
 CREATE TABLE student(
@@ -22,7 +26,7 @@ CREATE TABLE student(
 -- 2.트리거 생성 = 데이터 삽입 시 시퀀스를 자동으로 활용할 수 있도록 설정
 -- 트리거를 이용해서 테이블에 새로운 숫자값이 삽입될 때 시퀀스에 저장된 번호를 호출해서 ID값을 자동 설정
 -- 무엇을 만들거나 수정하거나 삭제할 때 or replace 사용하면 새로 만들거나 존재하면 덮어쓰기
-
+DROP TRIGGER trg_user;
 CREATE OR REPLACE TRIGGER trg_user
 BEFORE INSERT ON student
 FOR EACH ROW
