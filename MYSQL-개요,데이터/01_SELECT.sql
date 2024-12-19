@@ -120,7 +120,7 @@ ex ) 이름이 비어있지 않은 사원 조회
     3. SELECT 컬럼명 AS 별칭,컬럼명,컬럼명
     1: FROM
     2. WHERE 조건식
-    4. ODER BY 컬럼명| 별칭 | 컬럼순서[오름/ 내림 차순]
+    4. ORDER BY 컬럼명| 별칭 | 컬럼순서[오름/ 내림 차순]
 
     오름차순 : ASC(ascending)
     내림차순 : DESC(descending)
