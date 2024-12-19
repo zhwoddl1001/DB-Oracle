@@ -65,8 +65,14 @@
     CREATE TABLE 테이블명(
     테이블_ID INT         AUTO_INCREMENT PRIMARY KEY,
     유저명    VARCHAR(50) NOT NULL,
-    가입일자  DATE        NOT NULL DEFAULT CURRENT_DATE
+    가입일자  DATETIME       NOT NULL DEFAULT CURRENT_DATE
     )
+    ->
+    -- DATE 자료형은 current_timestamp 사용 불가
+-- DATE 자료형은 영-월-일 만 저장이 되고, DATETIOME 영-월-일 시:분:초 저장이 되므로 DATEYIME
+
+
+-- 주문 테이블
  
     유저명과 가입일자 모두 NULL(빈) 값 작성 XXX 
     -> 
