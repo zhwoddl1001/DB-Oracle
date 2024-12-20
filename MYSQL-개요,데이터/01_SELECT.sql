@@ -96,6 +96,36 @@ WHERE 컬럼명 LIKE '패턴';
 - A% : A라는 문자로 시작하는 문자열 찾기
 - %A% : A라는 문자가 어디에서든지 포함된 문자열 찾기
 
+'_'(글자 수)
+- 'A_' : A 뒤에 아무거나 한 글자만 존재하는 문자열
+    (AB,A1,A6,A하)
+ - '__A' : A 앞에 아무거나 두 글자만 있는 문자열
+         (가나A, CDA, 가ZA)
+
+-- _ 는 띄어씌기를 포함해서 글자수를 셈
+
+-- 한으로 시작하고 한 글자 뒤에 2글자만 있는 문자열
+select NAME
+FROM PRODUCT
+WHERE NAME LIKE '한________';
+-- 한국산 유기농 쌀 글자 하나씩을 봄 _ 8개
+
+select NAME
+FROM PRODUCT
+WHERE NAME LIKE '한_________';
+-- 한정판 고급 텀블러 
+
+ -- 이메일을 조회할 경우 글자가 9자리인 USERNAME 조회 단, @ 뒤에 오는 이메일 모두 포함해 가져올 것
+ SELECT USERNAME , EMAIL
+ FROM USER
+ WHERE EMAIL LIKE '_________@%';
+
+ ESCAPE'#'
+
+  - ESCAPE : 특수문자를 단순한 문자열로 인식
+  SELECT EMAIL
+  FROM USER
+  WHERE EMAIL LIKE '__#_%' ESCAPE '#'; #뒤에오는 특수문자는 단순한 문자 취급
 */
 
 
